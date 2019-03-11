@@ -1,0 +1,117 @@
+String manipulation----
+
+Use the StringManipulator and StringManipulatorTesting classes
+
+Objectives: Practice method signatures by implementing tasks-
+
+Arrays---
+
+Fixed-size sequential collection of elements of the same type with a 
+zero-based index.
+
+To use an array, we first declare it, initialze and add elements or values to it.
+
+Declaration, initialization, and adding in seperate steps: 
+
+int[] myArray;
+myArray = new int[5]; //initialization
+myArray[0] = 4;
+myArray[1] = 8;
+myArray[2] = 3;
+myArray[3] = 5;
+myArray[4] = 9;
+
+all at once:
+
+int[] myArray = {4, 8 , 3, 5, 9};
+
+In Java an array has a fixed size (after initialization), meaning  you cannot 
+add or remove items from an array.
+
+ArrayList---
+
+If you need array that is not fixed in size, the util module provides us with an 
+ArrayList. There are some differences in how we interact with this object. Still zero based.
+
+We can add as many items as we need to! To create and add items, do the following:
+
+import java.util.ArrayList;
+ArrayList<Integer> myArray = new ArrayList<Integer>();
+
+What is <Integer>? This is a generics, it tells our ArrayList of the acceptable types
+it can hold. If we did not include it, then we could add anything to our ArrayList- strings, ints, etc.
+
+Generics helps to keep our compiler, and us, from making mistakes that would bite us during runtime.
+
+Add using:
+
+myArray.add(10);
+int num = myArray.get(0); 
+
+What about adding elements that are of different types? All objects are inherited from the Object class. 
+Therefore, we can have our generic as an object and add different types of objects! For example:
+
+import java.util.ArrayList;
+ArrayList<Object> list = new ArrayList<Object>();
+list.add(10);
+list.add("Hello");
+list.add(new ArrayList<Integer>());
+list.add(new Double(12.0));
+
+System.out.println(list);
+
+useful link: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
+
+Loops----
+
+For loops and while loops in java
+
+While loop:
+
+int i = 0;
+while(i < 7)
+{
+    System.out.println("foo");
+    i++;
+}
+
+for when you don't know how much to iterate through something.
+
+
+For Loop:
+
+4 parts (initialization, termination, increment, and body statements)
+
+for (int i = 0; i < 7; i++) {
+    System.out.println("bar");
+}
+
+We can easily iterate over an array, since we will always konw its length:
+
+ArrayList<String> dynamicArray = new ArrayList<String>();
+dyanmicArray.add("hello");
+dynamicArray.add("world");
+dynamicArray.add("etc");
+for (int i = 0; i < dynamicArray.size(); i++) {
+    System.out.println(dynamicArray.get(i));
+}
+
+Ehanced For Loop---
+
+Times you need to assign the array element to a variable and manipulate it some way, 
+but we don't care about the correct index at all.
+
+for(int i = 0; i < dynamicArray.size(); i++) {
+    String name = dynamicArray.get(i);
+    System.out.println("hello " + name);
+}
+
+Rather than this, we can translate to this:
+
+for(String name : dynamicArray) {
+    System.out.println("hello" + name);
+}
+
+for(element container : collection) {
+    //body statements
+}

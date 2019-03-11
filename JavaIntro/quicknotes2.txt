@@ -1,0 +1,84 @@
+Strings----
+
+-Learn the String class in Java
+- Practice the most popular string methods
+
+String myVariableName = "My String's value";
+
+Instances of the String class are immutable, cannot be modified.
+
+Methods of the String Class:
+
+- Length - Use to determine length of a string variable.length();
+- Concatenate - A String method that allows two strings to join into one
+- Format: Another way of concatenating strings!
+
+String ninja = String.format("Hi %s, you owe me $%.2f !", "Jack", 25.0);
+
+Trim() is useful for deleting white space
+
+indexof helps you find where something is
+
+toLowerCase() and toUpperCase()
+
+Conditionals---
+
+boolean defenderGuarding = true;
+if(defenderGuarding == true) {
+    System.out.println("Pass The Ball")
+}
+
+If-Else If-Else
+
+boolean defenderGuarding = true;
+boolean closeToBasket = true;
+if(defenderGuarding == true) {
+    System.out.println("Pass The Ball");
+} else if(closeToBasket == true) {
+    System.out.println("Shoot The Ball");
+} else {
+    System.out.println("Dribble the Ball");
+}
+
+Methods-----
+
+-Define method signatures
+-Overloading methods
+
+Due to the object oriented nature of Java, we will only deal with methods not
+stand-alone functions. Always refer to methods
+
+Method declaration:
+
+Methods are just functions that are attached to an object. Consists of a code body and
+a method declaration. Which includes the access level, return type, name, and parameters.
+
+Return value is either a class, a primitive or void
+
+Parameter variables are inputs to the method.
+
+Method Signatures:
+
+public String fizzBuzz(int number) {}
+
+This method has a signature of fizzBuzz(int), only info contained is the name and parameter type
+
+public void fooBar(int someNumber, String someString) {}
+
+The signature would be fooBar(int, String), this is the case for every method and allouws us to OVERLOAD them.
+
+
+Overloading Methods-----
+
+Method overloading is when we call two methods the same name. For example:
+
+public String fizzBuzz(int number) {
+
+public String fizzBuzz(String number, int numberTwo) {}
+
+Which code would be invoked when we call the fizzBuzz method? It depends on the argument type and 
+method signature!
+
+Due to Java's type system, if we try to call fizzBuzz with a string and int, it will know we are 
+trying to call fizzBuzz method with the signature(String, int). Allow us to handle different cases 
+of method invocation based on our inputs.

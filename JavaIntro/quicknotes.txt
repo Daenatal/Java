@@ -1,0 +1,66 @@
+main() is the entry point for our methods
+keep an eye on static
+
+Intro to data types, intro to primitive vs object types
+
+A variable is a piece of memory we can assign data to make it easy to use.
+
+Every variable requires a type declaration when we initialize it.
+
+pattern is type variableName;
+
+to assign, use variableName = value;
+
+Data Types---
+
+Primitive Types--
+
+- Int: holds integers from negative 2 bil to positive 2 bil
+- Long: for really big numbers
+- boolean: true or false
+- double: for decimals, far more precise than float
+- char: used to store a single char like 'A'
+
+Object Types---
+
+- Integer: this class wraps a value of the primitive type int into an object
+- Long: Wraps a value of the primitive type long in an object
+- Boolean: Wraps a value of the primitive type boolean in an object
+- double
+- Character: 
+- String: Represents a sequence or characters
+- BigInteger: Represents an integer that can be any size at all. 
+
+primitives are lower while object types are capitalized
+
+Type Casting----
+
+How to change types in Java, for example byte to int
+
+Explicit vs Implicit:
+
+One you cast, the other happens automatically. Make sure memory is sufficient for the type
+being casted to.
+
+When do we use one over the other? 
+
+1. Performance: Object types are an instance of a class. They hold data and methods, therefore
+memory capactiy is much bigger than their primitive counterpart.
+
+2. null values: Primitive data types can only hold data. However, Object types 
+are pointers to where the data is stored. Pointers can point to nothing (Null), primitives can't.
+
+Importing----
+
+- Import different java classes into project
+- Use test file to run java classes
+
+Seperate class info from the testing and running information.
+
+So we create a non main method class.
+
+import statement = import java.util.Date;
+
+check for best practices and deprecation
+
+*We will now be creating a test file that runs our java classes
