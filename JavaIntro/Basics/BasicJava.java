@@ -107,4 +107,14 @@ public class BasicJava {
         minmaxavg[2] = avg/x.size();
         return minmaxavg;
     }
+    public void shiftArray(ArrayList<Integer> x) {
+        for(int i = 0; i< x.size(); i++) {
+            if(i == (x.size() - 1)) {
+                x.set(i, 0);
+            } else {
+                int temp = x.get(i+1);
+                x.set(i, temp);
+            }
+        }
+    }
 }
